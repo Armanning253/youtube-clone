@@ -12,6 +12,10 @@ import youtube from './api/youtube';
 import './App.css';
 class App extends React.Component {
 
+  state = {
+    videos: [],
+  };
+
   onTermSubmit = async (term) => {
     const result = await youtube.get('/search', {
       params: {
@@ -19,15 +23,15 @@ class App extends React.Component {
       }
     })
 
-    console.log(result.data.items);
+    this.setState({ videos: result.data.items })
   }
   render() {
     return (
 
       <div className="App" >
-        <h1> App</h1>
+        <h1>Youtube</h1>
         <Search onFormSubmit={this.onTermSubmit} />
-        <VideoConsole />
+        <VideoConsole videos={this.state.videos} />
 
 
       </div >

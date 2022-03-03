@@ -7,7 +7,7 @@ import VideoPlayer from '../../components/videoPlayer/VideoPlayer.component';
 // ------------ STYLES ---------- //
 import './VideoConsole.styles.scss';
 
-const VideoConsole = () => {
+const VideoConsole = ({ videos }) => {
     return (
         <div className='videoConsole'>
 
@@ -16,7 +16,7 @@ const VideoConsole = () => {
             </div>
 
             <div className="consoleList">
-                <VideoList />
+                <VideoList videos={videos} />
             </div>
 
         </div>

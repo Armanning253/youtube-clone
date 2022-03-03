@@ -1,17 +1,17 @@
 .videoConsole {
     display: flex;
-    border: solid black 2px;
+    border: solid red .5rem;
     margin: 1rem;
     padding: 1rem;
-    height: 60vh;
 }
 .consolePlayer {
-    flex-grow: 2;
+    width: 60vw;
+    height: 70vh;
     border: solid 2px;
     display: flex;
 }
 .consoleList {
-    flex-grow: 1;
+    width: 30vw;
     border: solid blue 1px;
     margin-left: 1rem;
 }

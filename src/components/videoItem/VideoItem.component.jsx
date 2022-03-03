@@ -3,10 +3,11 @@ import React from 'react'
 // -------- STYLES ------------- //
 import './VideoItem.styles.scss';
 
-const VideoItem = () => {
+const VideoItem = ({ video }) => {
     return (
         <div className='videoItem'>
-            <h4>video item</h4>
+            <img className='videoThumbnail' src={video.snippet.thumbnails.medium.url} alt="video thumbnail" />
+            <p>{video.snippet.title}</p>
         </div>
     )
 }
