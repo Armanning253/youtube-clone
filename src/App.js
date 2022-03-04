@@ -22,9 +22,10 @@ class App extends React.Component {
         q: term,
       }
     })
-
     this.setState({ videos: result.data.items })
+    console.log(result.data.items)
   }
+
   render() {
     return (
 
@@ -32,7 +33,6 @@ class App extends React.Component {
         <h1>Youtube</h1>
         <Search onFormSubmit={this.onTermSubmit} />
         <VideoConsole videos={this.state.videos} />
-
 
       </div >
     );

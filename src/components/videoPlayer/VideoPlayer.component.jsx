@@ -3,11 +3,15 @@ import React from 'react'
 // ----------- STYLES ----------//
 import './VideoPlayer.styles.scss';
 
-const VideoPlayer = () => {
+const VideoPlayer = ({ video }) => {
+
+    const videoSrc = `https://www.youtube.com/embed/${video}`
+    console.log(`videoPlayer`)
     return (
         <div className='videoPlayer'>
-            <h4>video player</h4>
-        </div>
+
+            <iframe src={videoSrc}></iframe>
+        </div >
     )
 }
 

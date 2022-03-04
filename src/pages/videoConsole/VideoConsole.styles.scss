@@ -1,4 +1,6 @@
 .videoConsole {
+    height: 75vh;
+
     display: flex;
     border: solid red .5rem;
     margin: 1rem;
@@ -6,7 +8,6 @@
 }
 .consolePlayer {
     width: 60vw;
-    height: 70vh;
     border: solid 2px;
     display: flex;
 }
@@ -14,4 +15,5 @@
     width: 30vw;
     border: solid blue 1px;
     margin-left: 1rem;
+    overflow: scroll
 }
