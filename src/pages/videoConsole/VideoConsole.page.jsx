@@ -13,7 +13,7 @@ const VideoConsole = ({ videos }) => {
 
     const handleSelectVideo = (video) => {
         setSelectVideo(video.id.videoId)
-        console.log(video);
+        console.log(selectVideo);
     }
 
     return (

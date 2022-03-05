@@ -11,6 +11,7 @@ const VideoPlayer = ({ video }) => {
         <div className='videoPlayer'>
 
             <iframe src={videoSrc}></iframe>
+            <title>{video}</title>
         </div >
     )
 }
