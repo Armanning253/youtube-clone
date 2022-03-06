@@ -4,12 +4,12 @@ import React, { useState } from 'react'
 import "./Search.styles.scss";
 
 
-const Search = ({ onFormSubmit }) => {
+const Search = ({ onTermSubmit }) => {
     const [term, setTerm] = useState('')
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        return onFormSubmit(term);
+        return onTermSubmit(term);
     }
     return (
         <div className='searchContainer'>

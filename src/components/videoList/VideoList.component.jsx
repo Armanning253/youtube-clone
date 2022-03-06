@@ -6,14 +6,18 @@ import VideoItem from '../videoItem/VideoItem.component';
 // ------------ STYLES ------------//
 import './VideoList.styles.scss';
 
-const VideoList = ({ videos, handleSelectVideo }) => {
+const VideoList = ({ videos, clickVideo }) => {
 
     const mappedList = videos.map((video) => {
-        return <VideoItem video={video} key={video.id} handleSelectVideo={handleSelectVideo} />
+        return (
+            <VideoItem
+                video={video}
+                key={video.id.videoId}
+                clickVideo={clickVideo}
+            />)
     });
     return (
         <div className='videoList'>
-            <h2>VIDEO LIST</h2>
 
             {mappedList}
         </div>

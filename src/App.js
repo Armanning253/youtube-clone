@@ -31,7 +31,7 @@ class App extends React.Component {
 
       <div className="App" >
         <h1>Youtube</h1>
-        <Search onFormSubmit={this.onTermSubmit} />
+        <Search onTermSubmit={this.onTermSubmit} />
         <VideoConsole videos={this.state.videos} />
 
       </div >

@@ -9,22 +9,25 @@ import './VideoConsole.styles.scss';
 
 const VideoConsole = ({ videos }) => {
 
-    const [selectVideo, setSelectVideo] = useState(null);
+    const [selectedVideo, setSelectedVideo] = useState('');
 
-    const handleSelectVideo = (video) => {
-        setSelectVideo(video.id.videoId)
-        console.log(selectVideo);
-    }
+    const clickVideo = (video) => {
+        setSelectedVideo(video)
+        console.log(`this is the video info ${video.snippet.title} `);
+    };
+
+
+
 
     return (
         <div className='videoConsole'>
 
             <div className='consolePlayer'>
-                <VideoPlayer video={selectVideo} />
+                <VideoPlayer video={selectedVideo} />
             </div>
 
             <div className="consoleList">
-                <VideoList videos={videos} handleSelectVideo={handleSelectVideo} />
+                <VideoList videos={videos} clickVideo={clickVideo} />
             </div>
 
         </div>
