@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // ------------ STYLES ---------- //
 import "./Search.styles.scss";
 
 
 const Search = ({ onTermSubmit }) => {
-    const [term, setTerm] = useState('')
+    const [term, setTerm] = useState('van life');
+
+    useEffect(() => (onTermSubmit(term)), []);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -17,7 +19,7 @@ const Search = ({ onTermSubmit }) => {
 
                 <input
                     type="text"
-                    value={term}
+                    // value={term}
                     placeholder="VIDEO SEARCH"
                     onChange={(e) => { setTerm(e.target.value) }}
                 />

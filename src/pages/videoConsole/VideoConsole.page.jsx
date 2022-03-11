@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // --------- COMPONENTS -------------- //
 import VideoList from '../../components/videoList/VideoList.component'
@@ -9,18 +9,19 @@ import './VideoConsole.styles.scss';
 
 const VideoConsole = ({ videos }) => {
 
-    const [selectedVideo, setSelectedVideo] = useState('');
+    const [selectedVideo, setSelectedVideo] = useState(null);
 
     const clickVideo = (video) => {
-        setSelectedVideo(video)
-        console.log(`this is the video info ${video.snippet.title} `);
+        setSelectedVideo(!video ? videos[0] : video);
+
     };
 
-
-
+    useEffect(() => setSelectedVideo(videos[0]), [videos]);
 
     return (
         <div className='videoConsole'>
+
+
 
             <div className='consolePlayer'>
                 <VideoPlayer video={selectedVideo} />

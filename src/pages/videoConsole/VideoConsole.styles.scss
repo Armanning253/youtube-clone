@@ -1,6 +1,6 @@
 .videoConsole {
-    height: 75vh;
-
+    background-color: black;
+    color: white;
     display: flex;
     border: solid red .5rem;
     margin: 1rem;
@@ -8,7 +8,8 @@
 }
 .consolePlayer {
     width: 60vw;
-    border: solid 2px;
+
+    border: solid 2px yellow;
     display: flex;
 }
 .consoleList {
