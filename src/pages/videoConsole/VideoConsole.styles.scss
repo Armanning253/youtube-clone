@@ -2,19 +2,32 @@
     background-color: black;
     color: white;
     display: flex;
-    border: solid red .5rem;
+    flex-direction: column;
     margin: 1rem;
     padding: 1rem;
 }
-.consolePlayer {
-    width: 60vw;
-
-    border: solid 2px yellow;
+.consoleVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.consoleNav {
+    color: red;
+}
+.consoleDisplay {
     display: flex;
 }
+.consolePlayer {
+    width: 60vw;
+    height: 600px;
+
+}
+.videoBig {
+    height:100%;
+    
+}
+
 .consoleList {
-    width: 30vw;
-    border: solid blue 1px;
-    margin-left: 1rem;
-    overflow: scroll
+    width: 40vw;
+    
 }
