@@ -8,9 +8,14 @@
 
         input{
             background-color: rgb(33, 33, 33);
+            color: rgb(222,222,222);
         }
     }
 }
 .logo {
     color: white;
+    &:hover{
+        cursor: pointer;
+        color: rgb(222, 33, 33);
+    }
 }

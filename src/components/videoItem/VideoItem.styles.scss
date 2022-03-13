@@ -1,7 +1,16 @@
 .videoItem {
  margin: 5rem auto;
  width: 80%;
+ transition: transform 500ms;
+
+ &:hover{
+    transform: scale(1.1);
+}
+
+ 
 };
 .videoThumbnail {
     width: 100%;
+  
+    
 }
