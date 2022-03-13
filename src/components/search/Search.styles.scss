@@ -1,6 +1,16 @@
 .searchContainer{
-    border: solid 2px black;
-    background-color: rgb(204, 40, 40);
-    padding: 10px;
-    margin-top: -1rem;
+    display:flex;
+    background-color: black;
+    padding: 0 2rem;
+
+    form{
+        margin: auto;
+
+        input{
+            background-color: rgb(33, 33, 33);
+        }
+    }
+}
+.logo {
+    color: white;
 }

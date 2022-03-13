@@ -5,7 +5,7 @@ import "./Search.styles.scss";
 
 
 const Search = ({ onTermSubmit }) => {
-    const [term, setTerm] = useState('van life');
+    const [term, setTerm] = useState('web development');
 
     useEffect(() => (onTermSubmit(term)), []);
 
@@ -15,6 +15,7 @@ const Search = ({ onTermSubmit }) => {
     }
     return (
         <div className='searchContainer'>
+            <h1 className='logo'>YouTube</h1>
             <form onSubmit={handleSubmit} >
 
                 <input

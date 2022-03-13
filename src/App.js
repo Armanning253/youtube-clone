@@ -30,7 +30,6 @@ class App extends React.Component {
     return (
 
       <div className="App" >
-        <h1>Youtube</h1>
         <Search onTermSubmit={this.onTermSubmit} />
         <VideoConsole videos={this.state.videos} />
 

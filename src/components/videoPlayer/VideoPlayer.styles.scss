@@ -2,11 +2,15 @@
   margin: auto;
   width: 100%;
   height: 100%;
+
   iframe{
+    border: none;
     width: 100%;
     height: 80vh;
   }
 }
  .videoPlayerDiscription {
-   height: 20vh;
+   height: 30vh;
+   background: rgb(33, 33, 33);
+   padding: 1rem;
  }
