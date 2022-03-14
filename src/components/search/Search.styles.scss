@@ -1,9 +1,14 @@
 .searchContainer{
     display:flex;
+    align-items: center;
     background-color: black;
+    color: white;
     padding: 0 2rem;
+    font-size: 1.5rem;
 
+    
     form{
+        color: white;
         margin: auto;
 
         input{
@@ -14,8 +19,37 @@
 }
 .logo {
     color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -3px;
     &:hover{
         cursor: pointer;
         color: rgb(222, 33, 33);
     }
+}
+
+// ------ icons ---------
+.searchIcon {
+    position: relative;
+    top: 6px;
+    &:hover{
+        color: red;
+    }
+}
+.searchBars {
+    margin-right: .5rem;
+    font-size: 2rem;
+}
+.logoIcon{
+    color: red;
+    font-size: 2rem;
+    margin-right: .25rem;
+}
+.iconGroup{
+    display: flex;
+    justify-content: space-evenly;
+    width: 33vw;
+}
+.videoIcon{
+    font-size: 2rem;
 }

@@ -32,7 +32,6 @@ class App extends React.Component {
       <div className="App" >
         <Search onTermSubmit={this.onTermSubmit} />
         <VideoConsole videos={this.state.videos} />
-
       </div >
     );
   }
