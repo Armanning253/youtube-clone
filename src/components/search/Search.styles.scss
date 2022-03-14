@@ -1,18 +1,23 @@
 .searchContainer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     display:flex;
     align-items: center;
-    background-color: black;
+    background-color: rgb(36, 36, 36);
     color: white;
-    padding: 0 2rem;
-    font-size: 1.5rem;
-
+    padding: .5rem 1.5rem;
+    
     
     form{
         color: white;
         margin: auto;
 
         input{
-            background-color: rgb(33, 33, 33);
+            height: 2rem;
+            background-color: black;
+            width: 35vw;
             color: rgb(222,222,222);
         }
     }
@@ -29,27 +34,74 @@
 }
 
 // ------ icons ---------
-.searchIcon {
+.searchIcons {
     position: relative;
-    top: 6px;
+    top: 4px;
+
     &:hover{
         color: red;
     }
 }
+.iconGroup{
+    display: flex;
+    justify-content: space-evenly;
+    width: 15vw;
+}
 .searchBars {
-    margin-right: .5rem;
-    font-size: 2rem;
+    margin-right: 2rem;
+    font-size: 1.5rem;
 }
 .logoIcon{
     color: red;
     font-size: 2rem;
+    top: 6px;
     margin-right: .25rem;
 }
-.iconGroup{
-    display: flex;
-    justify-content: space-evenly;
-    width: 33vw;
+.deleteIcon{
+    position: relative;
+    right: 1rem;
+}
+.searchIcon{
+    background-color: rgb(55, 55, 55);
+    position: relative;
+    right: 1rem;
+    padding: .5rem  1.5rem;
+}
+.microphone {
+    background-color: black;
+    padding: .5rem;
+    border-radius: 50%;
 }
 .videoIcon{
-    font-size: 2rem;
+    top: 4px;
+    font-size: 1.5rem;
 }
+
+//------- TOOL TIP ------------>
+.toolTip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .toolTipText {
+    visibility: hidden;
+    font-size: 1rem;
+    width: 170px;
+    background-color: rgb(61, 60, 60);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    // z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .toolTip:hover .toolTipText {
+    visibility: visible;
+    
+  }

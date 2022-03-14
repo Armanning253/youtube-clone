@@ -18,8 +18,14 @@ const Search = ({ onTermSubmit }) => {
     }
     return (
         <div className='searchContainer'>
-            <BsList className='searchBars searchIcon' />
-            <h1 className='logo'><FaYoutube className='logoIcon searchIcon' />YouTube</h1>
+            <BsList className='searchBars searchIcons' />
+
+            <div className='toolTip'>
+                <div className='logo'><FaYoutube className='logoIcon searchIcons' />YouTube</div>
+                <p className='toolTipText'>YouTube Home</p>
+            </div>
+
+
             <form onSubmit={handleSubmit} >
                 <input
                     type="text"
@@ -27,17 +33,40 @@ const Search = ({ onTermSubmit }) => {
                     placeholder="VIDEO SEARCH"
                     onChange={(e) => { setTerm(e.target.value) }}
                 />
-                <BsX className='searchIcon' />
-                <FaSearch className='searchIcon' />
+                <BsX className='deleteIcon searchIcons' />
+
+                <div className='toolTip'>
+                    <FaSearch className='searchIcon searchIcons' />
+                    <p className='toolTipText'>Search</p>
+                </div>
+
+                <div className='toolTip'>
+                    <FaMicrophone className='microphone searchIcons' />
+                    <p className='toolTipText'>Search with your voice</p>
+                </div>
+
             </form>
             <div className='iconGroup'>
-                <FaMicrophone className='searchIcon' />
-                <BiVideoPlus className='searchIcon videoIcon' />
-                <BsGrid3X3Gap className='searchIcon' />
-                <BsBell className='searchIcon' />
-                <img src="#" alt="profile" />
+
+
+                <div className='toolTip'>
+                    <BiVideoPlus className='videoIcon searchIcons ' />
+                    <p className='toolTipText'>Create</p>
+                </div>
+
+                <div className='toolTip'>
+                    <BsGrid3X3Gap className='searchIcons' />
+                    <p className='toolTipText'>YouTube apps</p>
+                </div>
+
+                <div className='toolTip'>
+                    <BsBell className='searchIcons' />
+                    <p className='toolTipText'>Notifications</p>
+                </div>
+
+                <img src="#" alt="pic" />
             </div>
-        </div>
+        </div >
     )
 }
 
