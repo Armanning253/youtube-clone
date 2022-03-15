@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 // ------------ STYLES ---------- //
-import { FaYoutube, FaSearch, FaBars, FaMicrophone } from 'react-icons/fa';
+import { FaYoutube, FaSearch, FaMicrophone } from 'react-icons/fa';
 import { BiVideoPlus } from 'react-icons/bi';
 import { BsGrid3X3Gap, BsBell, BsX, BsList } from "react-icons/bs";
 import "./Search.styles.scss";
