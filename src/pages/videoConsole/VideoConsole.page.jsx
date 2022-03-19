@@ -30,6 +30,7 @@ const VideoConsole = ({ videos }) => {
             <div className='consoleNav'>
                 <VideoNav videoToggle={videoToggle} />
             </div>
+
             <div className={videoBig ? 'consoleVertical' : 'consoleDisplay'}>
                 <div className={videoBig ? 'videoBig' : 'consolePlayer'}>
                     <VideoPlayer videoBig={videoBig} video={selectedVideo} />

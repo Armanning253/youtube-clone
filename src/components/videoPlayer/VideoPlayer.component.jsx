@@ -3,13 +3,14 @@ import React from 'react'
 // ----------- STYLES ----------//
 import './VideoPlayer.styles.scss';
 
-const VideoPlayer = ({ video }) => {
+const VideoPlayer = ({ video, videoBig }) => {
     if (!video) { return < div > loading... </ div > }
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
 
     return (
         <div className={'videoPlayer'}>
-            <iframe title={video.snippet.title} src={videoSrc}></iframe>
+            <iframe className={videoBig ? 'IframeBig' : ''} title={video.snippet.title} src={videoSrc}></iframe>
+
             <div className='videoPlayerDiscription'>
                 <h3>{video.snippet.title}</h3>
                 <p>{video.snippet.publishTime}</p>

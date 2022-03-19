@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 // ------------ STYLES ---------- //
 import { FaYoutube, FaSearch, FaMicrophone } from 'react-icons/fa';
@@ -9,28 +10,35 @@ import "./Search.styles.scss";
 
 const Search = ({ onTermSubmit }) => {
     const [term, setTerm] = useState('web development');
+    const [openMenu, setOpenMenu] = useState(false);
 
-    useEffect(() => (onTermSubmit(term)), []);
+    useEffect(() => (onTermSubmit(term)), []); //<--searchs default term
 
     const handleSubmit = (event) => {
         event.preventDefault();
         return onTermSubmit(term);
+    };
+    const handleMenuSlide = () => {
+        setOpenMenu(!openMenu);
     }
     return (
         <div className='searchContainer'>
-            <BsList className='searchBars searchIcons' />
+            <BsList onClick={() => { handleMenuSlide() }} className='searchBars searchIcons' />
 
-            <div className='toolTip'>
+            {openMenu ? <div className='searchMenuSlide'>
+                slideMenu
+            </div> : null}
+
+            <Link to="/" className='toolTip'>
                 <div className='logo'><FaYoutube className='logoIcon searchIcons' />YouTube</div>
                 <p className='toolTipText'>YouTube Home</p>
-            </div>
-
+            </Link>
 
             <form onSubmit={handleSubmit} >
                 <input
                     type="text"
                     // value={term}
-                    placeholder="VIDEO SEARCH"
+                    placeholder="Search"
                     onChange={(e) => { setTerm(e.target.value) }}
                 />
                 <BsX className='deleteIcon searchIcons' />

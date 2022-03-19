@@ -2,11 +2,12 @@ import React from 'react';
 // import { Routes, Route, Link } from 'react-router-dom';
 
 // --------- COMPONENTS -------------- //
-import VideoConsole from './pages/videoConsole/VideoConsole.page';
-import Search from './components/search/Search.component';
+import VideoConsole from "./pages/videoConsole/VideoConsole.page";
+import Search from "./components/search/Search.component";
+import { Routes, Route } from "react-router-dom";
 
 // ---------- API ------------ //
-import youtube from './api/youtube';
+import youtube from "./api/youtube";
 
 // ------------ STYLES ---------- //
 import './App.css';
@@ -30,8 +31,16 @@ class App extends React.Component {
     return (
 
       <div className="App" >
+
         <Search onTermSubmit={this.onTermSubmit} />
-        <VideoConsole videos={this.state.videos} />
+        <Routes>
+          <Route path="/" element={<VideoConsole videos={this.state.videos} />
+          }>
+          </Route>
+        </Routes>
+
+
+
       </div >
     );
   }

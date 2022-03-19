@@ -3,7 +3,8 @@
     color: rgb(222, 222, 222);
     display: flex;
     flex-direction: column;
-    margin: 3rem 5rem ;
+    margin: 2.5rem 5rem ;
+    padding-top: 2.5rem;
 }
 .consoleVertical {
     display: flex;
@@ -13,6 +14,9 @@
 .consoleNav {
     color: red;
     background-color: rgb(31, 29, 29);
+    position: absolute;
+    left: 0;
+    z-index: 1;
     button{
         color: rgb(222, 222, 222);
         background-color: rgb(129, 24, 24);
@@ -43,5 +47,4 @@
 
 .consoleList {
     width: 25vw;
-    // margin: auto;
 }
