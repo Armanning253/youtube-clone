@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 // ------------ STYLES ---------- //
 import { FaYoutube, FaSearch, FaMicrophone } from 'react-icons/fa';
-import { BiVideoPlus } from 'react-icons/bi';
-import { BsGrid3X3Gap, BsBell, BsX, BsList } from "react-icons/bs";
+import { BiVideoPlus, BiHistory } from 'react-icons/bi';
+import { FiYoutube } from 'react-icons/fi';
+import { BsGrid3X3Gap, BsBell, BsX, BsList, BsHouseDoorFill, BsCompass, BsCollectionPlay, BsFillPlayBtnFill, BsClock, BsHandThumbsUp, BsChevronDown } from "react-icons/bs";
 import "./Search.styles.scss";
 
 
@@ -25,9 +26,20 @@ const Search = ({ onTermSubmit }) => {
         <div className='searchContainer'>
             <BsList onClick={() => { handleMenuSlide() }} className='searchBars searchIcons' />
 
-            {openMenu ? <div className='searchMenuSlide'>
-                slideMenu
-            </div> : null}
+            <div className={openMenu ? "searchMenu active" : "searchMenu"}>
+                <div><BsHouseDoorFill />home</div>
+                <div><BsCompass />Explore</div>
+                <div><BsCollectionPlay />Subscriptions</div>
+                <hr />
+                <div><FiYoutube />Library</div>
+                <div><BiHistory />History</div>
+                <div><BsFillPlayBtnFill />Your videos</div>
+                <div><BsClock />Watch later</div>
+                <div><BsHandThumbsUp />Liked videos</div>
+                <div><BsChevronDown />Show more</div>
+                <hr />
+                <div>SUBSCRIPTIONS</div>
+            </div>
 
             <Link to="/" className='toolTip'>
                 <div className='logo'><FaYoutube className='logoIcon searchIcons' />YouTube</div>
