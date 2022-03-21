@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
+// ------------ COMPONENTS ---------- //
+import MenuBar from '../menubar/MenuBar';
+
 // ------------ STYLES ---------- //
 import { FaYoutube, FaSearch, FaMicrophone } from 'react-icons/fa';
-import { BiVideoPlus, BiHistory } from 'react-icons/bi';
-import { FiYoutube } from 'react-icons/fi';
-import { BsGrid3X3Gap, BsBell, BsX, BsList, BsHouseDoorFill, BsCompass, BsCollectionPlay, BsFillPlayBtnFill, BsClock, BsHandThumbsUp, BsChevronDown } from "react-icons/bs";
+import { BiVideoPlus } from 'react-icons/bi';
+import { BsGrid3X3Gap, BsBell, BsX, BsList } from "react-icons/bs";
 import "./Search.styles.scss";
 
 
 const Search = ({ onTermSubmit }) => {
+
     const [term, setTerm] = useState('web development');
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -22,23 +25,22 @@ const Search = ({ onTermSubmit }) => {
     const handleMenuSlide = () => {
         setOpenMenu(!openMenu);
     }
+
+
     return (
         <div className='searchContainer'>
             <BsList onClick={() => { handleMenuSlide() }} className='searchBars searchIcons' />
 
             <div className={openMenu ? "searchMenu active" : "searchMenu"}>
-                <div><BsHouseDoorFill />home</div>
-                <div><BsCompass />Explore</div>
-                <div><BsCollectionPlay />Subscriptions</div>
-                <hr />
-                <div><FiYoutube />Library</div>
-                <div><BiHistory />History</div>
-                <div><BsFillPlayBtnFill />Your videos</div>
-                <div><BsClock />Watch later</div>
-                <div><BsHandThumbsUp />Liked videos</div>
-                <div><BsChevronDown />Show more</div>
-                <hr />
-                <div>SUBSCRIPTIONS</div>
+                <span>
+                    <BsList onClick={() => { handleMenuSlide() }} className='searchBars searchIcons' />
+                    <Link to="/" className='toolTip'>
+                        <div className='logo'><FaYoutube className='logoIcon searchIcons' />YouTube</div>
+                        <p className='toolTipText'>YouTube Home</p>
+                    </Link>
+                </span>
+
+                <MenuBar />
             </div>
 
             <Link to="/" className='toolTip'>
