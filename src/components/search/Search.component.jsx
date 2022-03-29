@@ -42,6 +42,7 @@ const Search = ({ onTermSubmit }) => {
 
                 <MenuBar />
             </div>
+            <div className={openMenu ? 'overlay' : ''}>overlay</div> {/* page overlay when model open*/}
 
             <Link to="/" className='toolTip'>
                 <div className='logo'><FaYoutube className='logoIcon searchIcons' />YouTube</div>
