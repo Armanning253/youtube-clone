@@ -133,14 +133,83 @@
   }
 
   .overlay{
-    background-color:rgba(0, 0, 0, 0.657);
+    background-color:rgba(0, 0, 0, 0.8);
     position: absolute;
-    top:0;
+    top:3rem;
     left:0;
     height: 100vh;
     width: 100vw;
     z-index: 1;
     transition: 500ms;
   }
+  .modal {
+     
+      display: none;
+      &.active{
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 0 0 16px 32px;
+          width: 600px;
+          height: 400px;
+          color: white;
+          background-color: rgb(33, 33, 33);
+          border: none;
+          z-index: 1;
+          transition: 900ms;
+      }
+      p {
+        color: #999;
+      }
+      .modalHeader {
+          display: flex;
+          justify-content: space-between;
+      }
+      .modalTitle {
+          padding: 48px 0 24px;
+      }
+      .modalExitBtn {
+          font-size: 2.5rem;
+          padding: .5rem;
+      }
+      .modalMicIcon {
+          font-size: 2rem;
+          background-color: rgb(55, 55, 55);
+          width: fit-content;
+          padding: 1.25rem;
+          border-radius: 50%;
+          margin: auto;
+      }
+  }
+  .dropdown {
+    position: absolute;
+     height: 0;
+     display: none;
+
+      &.active{
+          display:inline-block;
+          transform: translateX(-50%);
+          top: 3rem;
+          width: 200px;
+          height: 100%;
+          padding: 1rem;
+          background-color: red;
+          transition: 300ms;
+          z-index: 1;
+      }
+  }
+  // ------- SIGN IN BUTTON ---------- // 
+  .signInBtn {
+      color: #3ea6ff;
+      border: 2px solid;
+      background: transparent;
+      font-size: 1rem;
+      padding: .5rem;
+  }
+ 
+  
 
   
